@@ -1,26 +1,91 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
+/* 🎨 Thème FR Gamarde (Tailwind v4) */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  /* Couleurs de base */
+  --color-background: #0f172a; /* fond encre */
+  --color-foreground: #f9fafb; /* texte clair */
+
+  /* Palette du club */
+  --color-club-violet: #5b2ecc;
+  --color-club-dark: #3e1e8f;
+  --color-club-accent: #a3e635;
+  --color-club-ink: #0f172a;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* 🌍 Styles de base */
+@layer base {
+  body {
+    font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont,
+      "Segoe UI", sans-serif;
+  }
+
+  .font-sport {
+    font-family: var(--font-barlow), system-ui, sans-serif;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+/* Marquee sponsors */
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused; /* pause au survol */
+}
+
+
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+
+/* ---- Espacement unifié entre sections ---- */
+.section-block {
+  @apply relative z-10 pt-10 md:pt-14 pb-20 md:pb-24;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+.heartbeat {
+  animation: heartbeat 2.8s ease-in-out infinite;
+}
+
+
+/* mobile */
+@media (max-width: 768px) {
+  .section-spacing {
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+  }
 }

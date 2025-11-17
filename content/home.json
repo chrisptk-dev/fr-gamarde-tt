@@ -1,0 +1,26 @@
+{
+  "hero_title": "FR Gamarde Tennis de Table",
+  "hero_subtitle": "Jouez pour le plaisir ou la compétition, dans une ambiance conviviale.",
+  "hero_cta_primary_label": "Rejoignez-nous",
+  "hero_cta_primary_link": "#inscription",
+  "hero_cta_secondary_label": "Infos pratiques",
+  "hero_cta_secondary_link": "#infos",
+
+  "services_intro_tag": "Le club en 3 points",
+  "services_intro_title": "Pourquoi rejoindre le FR Gamarde ?",
+
+  "services": [
+    {
+      "title": "Jouez pour le plaisir ou la compétition.",
+      "text": "Rejoignez nos équipes engagées en championnat ou participez à des rencontres amicales. Quel que soit votre objectif, le club vous accompagne pour vous épanouir au tennis de table."
+    },
+    {
+      "title": "Une ambiance conviviale.",
+      "text": "Venez partager votre passion dans une atmosphère chaleureuse, avec un vrai esprit d’équipe. Stages, événements et moments de partage rythment la vie du club toute l’année."
+    },
+    {
+      "title": "Progressez à votre rythme.",
+      "text": "Débutant, loisir ou compétiteur confirmé, nos entraîneurs vous aident à progresser étape par étape, avec des séances adaptées à votre niveau et vos objectifs."
+    }
+  ]
+}
