@@ -39,10 +39,10 @@ export default function LabelsPage() {
                 <span className="h-1 w-6 rounded-full bg-club-accent" />
                 <span>Label FFTT</span>
               </div>
-              <h2 className="text-lg md:text-xl font-sport text-white">
+              <h2 className="text-xl md:text-xl font-sport text-white">
                 🎖 Label Club Avenir – Niveau 1
               </h2>
-              <p className="text-sm md:text-base text-white/80 leading-relaxed">
+              <p className="text-base md:text-base text-white/80 leading-relaxed">
                 Ce label valorise les clubs qui s&apos;engagent dans la
                 formation des jeunes et le développement d&apos;un projet
                 sportif structuré. Il garantit un accueil de qualité pour les
@@ -81,10 +81,10 @@ export default function LabelsPage() {
                 <span className="h-1 w-6 rounded-full bg-club-accent" />
                 <span>Label FFTT</span>
               </div>
-              <h2 className="text-lg md:text-xl font-sport text-white">
+              <h2 className="text-xl md:text-xl font-sport text-white">
                 🎖 Label Club Responsable – Niveau 1
               </h2>
-              <p className="text-sm md:text-base text-white/80 leading-relaxed">
+              <p className="text-base md:text-base text-white/80 leading-relaxed">
                 Ce label récompense l&apos;implication du club dans la
                 prévention, le respect, la sécurité et la qualité de
                 l&apos;encadrement. Il souligne l&apos;attention portée aux
@@ -122,10 +122,10 @@ export default function LabelsPage() {
                 <span className="h-1 w-6 rounded-full bg-club-accent" />
                 <span>Label FFTT</span>
               </div>
-              <h2 className="text-lg md:text-xl font-sport text-white">
+              <h2 className="text-xl md:text-xl font-sport text-white">
                 🎖 Label Club Citoyen – Niveau 2
               </h2>
-              <p className="text-sm md:text-base text-white/80 leading-relaxed">
+              <p className="text-base md:text-base text-white/80 leading-relaxed">
                 Ce label met en avant l&apos;ancrage du club dans la vie locale
                 : actions auprès des jeunes, partenariats, ouverture vers les
                 écoles, les associations et la commune. Il reconnaît un club

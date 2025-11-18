@@ -59,7 +59,7 @@ export default function Hero() {
               Tennis de Table
             </h2>
 
-            <p className="mt-6 max-w-xl mx-auto text-white/85 text-base md:text-lg">
+            <p className="mt-6 max-w-xl mx-auto text-white/85 text-lg md:text-lg">
               Jouez pour le plaisir ou la compétition, dans une ambiance
               conviviale.
             </p>
