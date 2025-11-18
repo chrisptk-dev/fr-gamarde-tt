@@ -11,7 +11,7 @@ export default function InfosPratiquesSection () {
           <div className="bg-white/2 border border-white/10 rounded-3xl shadow-2xl backdrop-blur-md px-6 py-10 md:px-10 md:py-14">
             {/* Titre */}
             <div className="text-center mb-10 md:mb-12">
-              <p className="text-sm font-medium tracking-[.2em] text-club-accent/80 uppercase">
+              <p className="text-lg font-medium tracking-[.2em] text-club-accent/80 uppercase">
                 Infos pratiques
               </p>
               <h2 className="mt-3 text-2xl md:text-3xl font-sport text-white">
@@ -23,10 +23,10 @@ export default function InfosPratiquesSection () {
             <div className="grid gap-6 md:gap-8 md:grid-cols-3 mb-10 md:mb-12">
               {/* Horaires */}
               <article className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-7 shadow-md backdrop-blur-sm">
-                <h3 className="text-lg md:text-xl font-sport text-white mb-3">
+                <h3 className="text-xl md:text-xl font-sport text-white mb-3">
                   🕒 Horaires d’entraînement
                 </h3>
-                <ul className="text-white/80 text-sm md:text-base leading-relaxed space-y-1.5">
+                <ul className="text-white/80 text-base md:text-base leading-relaxed space-y-1.5">
                   <li>Mardi / Mercredi / Vendredi</li>
                   <li>17h30 – 19h30</li>
                 </ul>
@@ -34,10 +34,10 @@ export default function InfosPratiquesSection () {
 
               {/* Tarifs */}
               <article className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-7 shadow-md backdrop-blur-sm">
-                <h3 className="text-lg md:text-xl font-sport text-white mb-3">
+                <h3 className="text-xl md:text-xl font-sport text-white mb-3">
                   💶 Tarifs
                 </h3>
-                <p className="text-white/80 text-sm md:text-base leading-relaxed">
+                <p className="text-white/80 text-base md:text-base leading-relaxed">
                   Loisirs :{" "}
                   <span className="font-semibold text-white">40 € / an</span>
                   <br />
@@ -51,10 +51,10 @@ export default function InfosPratiquesSection () {
 
               {/* Lieu */}
               <article className="bg-white/5 border border-white/10 rounded-2xl p-6 md:p-7 shadow-md backdrop-blur-sm">
-                <h3 className="text-lg md:text-xl font-sport text-white mb-3">
+                <h3 className="text-xl md:text-xl font-sport text-white mb-3">
                   📍 Lieu
                 </h3>
-                <p className="text-white/80 text-sm md:text-base leading-relaxed">
+                <p className="text-white/80 text-base md:text-base leading-relaxed">
                   Hall des sports
                   <br />
                   <span className="text-white/60">40380 Gamarde-les-Bains</span>
@@ -73,10 +73,10 @@ export default function InfosPratiquesSection () {
             <div className="grid gap-6 md:gap-8 md:grid-cols-3">
               {/* Calendrier */}
               <article className="bg-white/4 border border-white/10 rounded-2xl p-6 md:p-7 shadow-md backdrop-blur-sm flex flex-col">
-                <h3 className="text-lg md:text-xl font-sport text-white mb-2">
+                <h3 className="text-xl md:text-xl font-sport text-white mb-2">
                   📅 Calendrier 2025
                 </h3>
-                <p className="text-white/80 text-sm md:text-base leading-relaxed mb-4 flex-1">
+                <p className="text-white/80 text-base md:text-base leading-relaxed mb-4 flex-1">
                   Planifiez votre saison et ne manquez aucune compétition.
                 </p>
                 <a
@@ -89,10 +89,10 @@ export default function InfosPratiquesSection () {
 
               {/* Misterping */}
               <article className="bg-white/4 border border-white/10 rounded-2xl p-6 md:p-7 shadow-md backdrop-blur-sm flex flex-col">
-                <h3 className="text-lg md:text-xl font-sport text-white mb-2">
+                <h3 className="text-xl md:text-xl font-sport text-white mb-2">
                   🏓 S’équiper avec Misterping
                 </h3>
-                <p className="text-white/80 text-sm md:text-base leading-relaxed mb-4 flex-1">
+                <p className="text-white/80 text-base md:text-base leading-relaxed mb-4 flex-1">
                   Découvrez notre partenaire équipementier pour raquettes, bois
                   et accessoires.
                 </p>
@@ -108,10 +108,10 @@ export default function InfosPratiquesSection () {
 
               {/* Vie du club */}
               <article className="bg-white/4 border border-white/10 rounded-2xl p-6 md:p-7 shadow-md backdrop-blur-sm flex flex-col">
-                <h3 className="text-lg md:text-xl font-sport text-white mb-2">
+                <h3 className="text-xl md:text-xl font-sport text-white mb-2">
                   👥 La vie du club
                 </h3>
-                <p className="text-white/80 text-sm md:text-base leading-relaxed mb-4 flex-grow">
+                <p className="text-white/80 text-base md:text-base leading-relaxed mb-4 flex-grow">
                   Suivez les résultats, photos et moments forts du FR Gamarde.
                 </p>
                 <div className="grid grid-cols-2 gap-3 mt-auto">

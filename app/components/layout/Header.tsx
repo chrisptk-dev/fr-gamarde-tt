@@ -77,14 +77,13 @@ export default function Header() {
       hover:bg-club-accent hover:text-club-ink
       transition-colors duration-200
     "
-              animate={{ scale: [1, 1.05, 1] }} // BATTEMENT + visible
+              animate={{ scale: [1, 1.12, 1] }}
               transition={{
-                duration: 2, // + rapide mais propre
+                duration: 1.8,
                 ease: "easeInOut",
                 repeat: Infinity,
-                repeatType: "loop",
               }}
-              whileHover={{ scale: 1.1 }} // hover clair et moderne
+              whileHover={{ scale: 1.15 }}
             >
               Nous contacter
             </motion.span>

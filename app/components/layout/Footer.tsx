@@ -90,7 +90,7 @@ export default function Footer() {
               rel="noopener noreferrer"
               className="text-club-accent font-semibold hover:underline"
             >
-              back2beb
+              back2web
             </a>
           </div>
         </div>

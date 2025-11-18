@@ -21,7 +21,7 @@ export default function NewsSection({ news }: NewsSectionProps) {
             {/* Titre */}
             <div className="flex items-baseline justify-between gap-4 mb-10">
               <div>
-                <p className="text-sm font-medium tracking-[.2em] text-club-accent/80 uppercase">
+                <p className="text-lg font-medium tracking-[.2em] text-club-accent/80 uppercase">
                   À la une du club
                 </p>
                 <h2 className="mt-3 text-2xl md:text-3xl font-sport text-white">
@@ -69,11 +69,11 @@ export default function NewsSection({ news }: NewsSectionProps) {
                       </span>
                     </div>
 
-                    <h3 className="font-sport text-white leading-snug text-lg md:text-xl">
+                    <h3 className="font-sport text-white leading-snug text-xl md:text-xl">
                       {post.title}
                     </h3>
 
-                    <p className="text-sm md:text-base text-white/75 line-clamp-3">
+                    <p className="text-base md:text-base text-white/75 line-clamp-3">
                       {post.excerpt}
                     </p>
 
