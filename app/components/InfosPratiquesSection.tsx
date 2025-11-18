@@ -1,4 +1,18 @@
-export default function InfosPratiquesSection () {
+// app/components/InfosPratiquesSection.tsx
+
+
+import { getDocumentBySlug } from "@/lib/documents";
+
+export default function InfosPratiquesSection() {
+  // On récupère UNIQUEMENT le planning
+  const planningDoc = getDocumentBySlug("planning");
+
+  // 👉 Fallback : si pas de doc Decap, on garde ton ancien PDF
+  const planningHref =
+    planningDoc && planningDoc.file
+      ? String(planningDoc.file)
+      : "/documents/calendrier-2025.pdf";
+
   return (
     <>
       {/* INFOS PRATIQUES */}
@@ -79,9 +93,11 @@ export default function InfosPratiquesSection () {
                 <p className="text-white/80 text-sm md:text-base leading-relaxed mb-4 flex-1">
                   Planifiez votre saison et ne manquez aucune compétition.
                 </p>
+
                 <a
-                  href="/documents/calendrier-2025.pdf"
+                  href={planningHref}
                   className="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold bg-club-accent text-club-ink hover:brightness-110 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow"
+                  download
                 >
                   Télécharger le planning
                 </a>
@@ -120,15 +136,15 @@ export default function InfosPratiquesSection () {
                     target="_blank"
                     rel="noreferrer"
                     className="
-      inline-flex items-center justify-center 
-      w-full
-      rounded-xl px-4 py-2 
-      text-sm font-semibold 
-      bg-white/10 text-white 
-      hover:bg-white/20 
-      transition-transform duration-200 
-      hover:-translate-y-0.5 hover:shadow
-    "
+                      inline-flex items-center justify-center 
+                      w-full
+                      rounded-xl px-4 py-2 
+                      text-sm font-semibold 
+                      bg-white/10 text-white 
+                      hover:bg-white/20 
+                      transition-transform duration-200 
+                      hover:-translate-y-0.5 hover:shadow
+                    "
                   >
                     Facebook
                   </a>
@@ -138,15 +154,15 @@ export default function InfosPratiquesSection () {
                     target="_blank"
                     rel="noreferrer"
                     className="
-      inline-flex items-center justify-center 
-      w-full
-      rounded-xl px-4 py-2 
-      text-sm font-semibold 
-      bg-white/10 text-white 
-      hover:bg-white/20 
-      transition-transform duration-200 
-      hover:-translate-y-0.5 hover:shadow
-    "
+                      inline-flex items-center justify-center 
+                      w-full
+                      rounded-xl px-4 py-2 
+                      text-sm font-semibold 
+                      bg-white/10 text-white 
+                      hover:bg-white/20 
+                      transition-transform duration-200 
+                      hover:-translate-y-0.5 hover:shadow
+                    "
                   >
                     Instagram
                   </a>

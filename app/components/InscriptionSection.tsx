@@ -1,6 +1,17 @@
 // app/components/InscriptionSection.tsx
 
+import { getDocumentBySlug } from "@/lib/documents";
+
 export default function InscriptionSection() {
+  // On récupère UNIQUEMENT le dossier d’inscription
+  const dossierDoc = getDocumentBySlug("dossier-inscription");
+
+  // Fallback : si pas encore rempli dans Decap, on garde ton ancien ZIP
+  const dossierHref =
+    dossierDoc && dossierDoc.file
+      ? String(dossierDoc.file)
+      : "/documents/dossier-inscription.zip";
+
   return (
     <>
       {/* INSCRIPTION / VENIR FAIRE UN ESSAI */}
@@ -60,13 +71,12 @@ export default function InscriptionSection() {
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <a
-                    href="/documents/dossier-inscription.zip"
+                    href={dossierHref}
+                    download
                     className="inline-flex items-center justify-center rounded-xl px-4 py-2 text-sm font-semibold bg-club-accent text-club-ink hover:brightness-110 transition-transform duration-200 hover:-translate-y-0.5 hover:shadow"
                   >
                     Télécharger le dossier
                   </a>
-                  {/* Optionnel : lien vers certificat médical si besoin */}
-                  {/* <a ...>Modèle de certificat médical</a> */}
                 </div>
               </article>
             </div>

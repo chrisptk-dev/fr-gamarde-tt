@@ -1,0 +1,65 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+locale: "fr"
+
+collections:
+  # ✅ COLLECTION ACTUALITES
+  - name: "actualites"
+    label: "Actualités"
+    folder: "content/actualites"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime", format: "YYYY-MM-DD" }
+      - label: "Catégorie"
+        name: "category"
+        widget: "select"
+        options:
+          - { label: "Vie du club", value: "vie-du-club" }
+          - { label: "Résultats", value: "resultats" }
+          - { label: "Divers", value: "divers" }
+      - { label: "Image mise en avant", name: "thumbnail", widget: "image", required: false }
+      - { label: "Contenu", name: "content", widget: "markdown" }
+
+  # ✅ COLLECTION GALERIE
+  - name: "galerie"
+    label: "Galerie"
+    folder: "content/galerie"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre de la série", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        field:
+          label: "Image"
+          name: "image"
+          widget: "image"
+
+# ✅ COLLECTION DOCUMENTS À TÉLÉCHARGER (2 blocs fixes)
+  - name: "documents"
+    label: "Documents à télécharger"
+    files:
+    - label: "Dossier d’inscription"
+      name: "dossier_inscription"
+      file: "content/documents/dossier-inscription.md"
+      fields:
+        - { label: "Titre du bouton", name: "title", widget: "string", default: "Dossier d’inscription" }
+        - { label: "Fichier (ZIP)", name: "file", widget: "file" }
+        - { label: "Type (ne pas modifier)", name: "type", widget: "hidden", default: "dossier" }
+
+    - label: "Planning / Calendrier"
+      name: "planning"
+      file: "content/documents/planning.md"
+      fields:
+        - { label: "Titre du bouton", name: "title", widget: "string", default: "Calendrier de la saison" }
+        - { label: "Fichier (PDF)", name: "file", widget: "file" }
+        - { label: "Type (ne pas modifier)", name: "type", widget: "hidden", default: "planning" }

@@ -1,58 +1,6 @@
 import Image from "next/image";
 import type { Metadata } from "next";
-
-type GalleryItem = {
-  id: string;
-  src: string;
-  alt: string;
-  title: string;
-  subtitle?: string;
-};
-
-const GALLERY_ITEMS: GalleryItem[] = [
-  {
-    id: "entrainement-jeunes",
-    src: "/galerie/entrainement-jeunes-fr-gamarde.webp",
-    alt: "Entraînement des jeunes au club",
-    title: "Entraînement des jeunes",
-    subtitle: "Stage de printemps",
-  },
-  {
-    id: "match-equipe-1",
-    src: "/galerie/match-equipe-1.webp",
-    alt: "Rencontre par équipes à domicile",
-    title: "Rencontre par équipes",
-    subtitle: "Victoire à domicile",
-  },
-  {
-    id: "fete-du-ping",
-    src: "/galerie/fetes-du-ping-fr-gamarde.webp",
-    alt: "La fête du Ping-pong à Gamarde",
-    title: "La fête du Ping-pong à Gamarde",
-    subtitle: "Ambiance conviviale",
-  },
-  {
-    id: "stage-vacances",
-    src: "/galerie/stage-vacances.webp",
-    alt: "Stage pendant les vacances scolaires",
-    title: "Stage vacances",
-    subtitle: "Progrès et bonne humeur",
-  },
-  {
-    id: "jeunes-competition",
-    src: "/galerie/les-jeunes-en-competition-fr-gamarde.webp",
-    alt: "Jeunes joueurs en compétition",
-    title: "Jeunes en compétition",
-    subtitle: "Compétition départementale",
-  },
-  {
-    id: "echauffement-seniors",
-    src: "/galerie/echauffement-stage-senior-fr-gamarde.webp",
-    alt: "Échauffement avant les matchs",
-    title: "Échauffement",
-    subtitle: "On transpire",
-  },
-];
+import { getAllGallery } from "@/lib/gallery";
 
 export const metadata: Metadata = {
   title: "Galerie photos",
@@ -61,6 +9,8 @@ export const metadata: Metadata = {
 };
 
 export default function GaleriePage() {
+  const albums = getAllGallery();
+
   return (
     <main className="bg-club-ink min-h-screen pt-16 pb-20">
       <section className="relative z-10">
@@ -82,8 +32,7 @@ export default function GaleriePage() {
                 <p className="mt-3 max-w-2xl text-sm md:text-base text-white/70">
                   Entraînements, compétitions, stages, vie du club… une
                   sélection de photos pour découvrir l’ambiance au quotidien.
-                  Cette galerie est fixe pour le moment et pourra être alimentée
-                  via le tableau de bord plus tard.
+                  Cette galerie pourra être alimentée via le tableau de bord.
                 </p>
               </div>
 
@@ -98,15 +47,15 @@ export default function GaleriePage() {
 
             {/* Grille d’images */}
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-5 md:gap-6">
-              {GALLERY_ITEMS.map((item) => (
+              {albums.map((item) => (
                 <figure
-                  key={item.id}
+                  key={item.slug}
                   className="group relative overflow-hidden rounded-2xl border border-white/10 bg-club-ink/60 shadow-lg backdrop-blur-md"
                 >
                   <div className="relative aspect-[4/3]">
                     <Image
-                      src={item.src}
-                      alt={item.alt}
+                      src={item.images[0]}
+                      alt={item.title}
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                       className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -120,9 +69,9 @@ export default function GaleriePage() {
                     <p className="text-sm font-semibold text-white drop-shadow">
                       {item.title}
                     </p>
-                    {item.subtitle && (
+                    {item.description && (
                       <p className="text-xs text-white/80 drop-shadow-sm">
-                        {item.subtitle}
+                        {item.description}
                       </p>
                     )}
                   </figcaption>
